@@ -1,1 +1,1 @@
-Dependencies: Express, Nodemon, dotenv, mongoose
+Dependencies: Express, Nodemon, dotenv, mongoose, multer

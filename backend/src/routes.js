@@ -2,12 +2,14 @@ const express = require("express");
 const multer = require("multer");
 const uploadConfig = require("./config/upload");
 const router = express.Router();
-const Auth = require("./controllers/AuthController");
-const Workplace = require("./controllers/WorkplaceController");
+const AuthController = require("./controllers/AuthController");
+const WorkplaceController = require("./controllers/WorkplaceController");
 
 const upload = multer(uploadConfig);
 
-router.post("/auth", Auth.store);
-router.post("/workplace", upload.single('thumbnail'), Workplace.store);
+router.post("/auth", AuthController.store);
+router.post("/workplace", upload.single("thumbnail"), WorkplaceController.store);
+router.get("/workplace", WorkplaceController.index);
+
 
 module.exports = router;

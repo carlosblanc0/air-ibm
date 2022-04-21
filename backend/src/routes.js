@@ -5,6 +5,7 @@ const router = express.Router();
 const AuthController = require("./controllers/AuthController");
 const DashboardController = require("./controllers/DashboardController");
 const WorkplaceController = require("./controllers/WorkplaceController");
+const BookingController = require("./controllers/BookingController");
 
 const upload = multer(uploadConfig);
 
@@ -16,5 +17,6 @@ router.post(
 );
 router.get("/workplace", WorkplaceController.index);
 router.get("/dashboard", DashboardController.show);
+router.post("/workplace/:workplace_id/booking", BookingController.store);
 
 module.exports = router;

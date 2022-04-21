@@ -1,5 +1,5 @@
 const Workplace = require("../models/Workplace");
-const User = require("../models/User");
+const user = require("../models/User");
 
 module.exports = {
   async index(req, res) {

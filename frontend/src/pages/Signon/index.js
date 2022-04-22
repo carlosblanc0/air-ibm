@@ -4,7 +4,7 @@ import API from "../../services/API";
 
 export default function Signin() {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -14,9 +14,7 @@ export default function Signin() {
     const { _id } = response.data;
 
     localStorage.setItem("user", _id);
-    navigate('/dashboard')
-    
-    
+    navigate("/dashboard");
   }
   return (
     <>
@@ -32,7 +30,6 @@ export default function Signin() {
           placeholder="IBM email address (e.g. jdoe@ibm.com)"
           onChange={(event) => setEmail(event.target.value)}
           value={email}
-          
         />
         <button className="btn" type="submit">
           Sign in

@@ -11,6 +11,9 @@ function App() {
     const response = await API.post("/auth", {
       email: email,
     });
+    const { _id } = response.data;
+
+    localStorage.setItem("user", _id);
   }
 
   return (

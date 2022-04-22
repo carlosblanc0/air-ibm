@@ -8,6 +8,10 @@ const WorkplaceSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+}, {
+  toJSON: {
+    virtuals: true,
+  }
 });
 
 WorkplaceSchema.virtual("thumbnail_url").get(function () {

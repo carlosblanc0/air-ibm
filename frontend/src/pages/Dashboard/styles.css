@@ -1,0 +1,31 @@
+ul.workplace-list {
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.25rem;
+    margin-bottom: 1.875rem;
+}
+
+ul.workplace-list li {
+    display: flex;
+    flex-direction: column;
+}
+
+ul.workplace-list li header {
+    width: 100%;
+    height: 7rem;
+    background-size: cover;
+    border-radius: 0.5rem;
+}
+
+ul.workplace-list li strong {
+    margin-top: 0.7rem;
+    font-size: 1rem;
+    color: #444444;
+}
+
+ul.workplace-list li span {
+    font-size: 0.9rem;
+    color: #999999;
+}

@@ -77,6 +77,18 @@ button {
   color: #ffffff;
   cursor: pointer;
 }
+.content button.btn-g {
+  border: 0;
+  border-radius: 0.3rem;
+  width: 100%;
+  height: 2rem;
+  padding: 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: #198038;
+  color: #ffffff;
+  cursor: pointer;
+}
 .content button.btn:hover {
-  background: #E14F50;
+  background: #e14f50;
 }

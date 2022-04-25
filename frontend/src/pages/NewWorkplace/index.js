@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from "react";
+import { Link } from "react-router-dom";
 import API from "../../services/API";
 import upload from "../../assets/upload.svg";
 import "./styles.css";
@@ -12,9 +13,10 @@ export default function NewWorkplace(history) {
   }, [thumbnail]);
 
   async function handleSubmit(event) {
+    event.preventDefault();
     const data = new FormData();
     const user_id = localStorage.getItem("user");
-    event.preventDefault();
+
     data.append("thumbnail", thumbnail);
     data.append("company", company);
     data.append("branch", branch);
@@ -53,9 +55,11 @@ export default function NewWorkplace(history) {
         value={branch}
         onChange={(event) => setBranch(event.target.value)}
       />
+      <Link to="/dashboard">
       <button type="submit" className="btn-g">
         Publish listing
       </button>
+      </Link>
     </form>
   );
 }

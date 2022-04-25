@@ -1,18 +1,24 @@
 const mongoose = require("mongoose");
-const WorkplaceSchema = new mongoose.Schema({
-  thumbnail: String,
-  company: String,
-  price: Number,
-  branch: [String],
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+const WorkplaceSchema = new mongoose.Schema(
+  {
+    thumbnail: String,
+    company: String,
+    price: Number,
+    branch: [String],
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
-}, {
-  toJSON: {
-    virtuals: true,
+  {
+    toJSON: {
+      virtuals: true,
+    },
+    toObject: {
+      virtuals: true,
+    },
   }
-});
+);
 
 WorkplaceSchema.virtual("thumbnail_url").get(function () {
   return `http://localhost:8080/files/${this.thumbnail}`;

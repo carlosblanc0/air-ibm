@@ -1,0 +1,14 @@
+label#thumbnail {
+    margin-bottom: 20px;
+    border: 0.2rem dashed #DDDDDD;
+    background-size: cover;
+    cursor: pointer;
+    height: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label#thumbnail input {
+    display: none;
+}

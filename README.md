@@ -8,6 +8,8 @@
 
 AirIBM is what Workplaces@IBM were to be modeled after a famous unicorn startup, Airbnb. I have, however, added some IBM look and feel to it, making the overall design look more mature.
 
+This is single page application built using React. I've tried sticking to, namely, the MVC (Model View Controller) design pattern, as I believe this pattern fits well with this type of application. The app is being served by Heroku on the backend, and Netlify deploys the frontend.
+
 ## Run Locally
 
 Clone the project

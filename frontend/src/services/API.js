@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create ({
-    baseURL: "http://localhost:8080/"
+    baseURL: "https://air-ibm.herokuapp.com/"
 });
 
 export default API;

@@ -56,7 +56,8 @@ Start the server
 
 ## Live Demo
 
-> Coming soon on https://air-ibm.herokuapp.com
+> https://air-ibm.netlify.app/
+> https://air-ibm.herokuapp.com
 
 ## Official Repo
 
